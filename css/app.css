@@ -252,7 +252,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #000;
+  background: linear-gradient(315deg, transparent 75%, #0a0a0a 0)-24px 0,
+  linear-gradient(45deg, transparent 75%, #0a0a0a 0) 24px 0,
+  linear-gradient(135deg, #3d3d3d 50%, transparent 0) 0 0,
+  linear-gradient(45deg, #575757 50%, #707070 0) 0 0 #707070;
+  background-size: 48px 48px;
 }
 #gameContainer {
   position: relative;
@@ -275,12 +279,33 @@ canvas {
 #startButton, #restartButton {
   display: none;
   width: 200px;
-  height: 40px;
-  background: #888;
+  height: 50px;
+
+  /* Центрирование текста */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Градиентный фон */
+  background: linear-gradient(to bottom, #1E90FF, #00BFFF);
+
+  /* Обводка (border) */
+  border: 2px solid #00FFFF;
+
+  /* Закругленные углы */
+  border-radius: 5px;
+
+  /* Тень */
+  box-shadow: 0 0 8px #00FFFF;
+
+  /* Стиль текста */
   color: white;
-  border: 2px solid white;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  text-align: center;
+
+  /* Убираем стандартные стили для <button> */
+  outline: none;
   cursor: pointer;
   pointer-events: auto;
 }
@@ -289,7 +314,27 @@ canvas {
   margin-top: 200px;
 }
 
-#startButton:hover, #restartButton:hover {
-  background: #555;
+#startButton {
+  margin-top: -30px;
 }
+
+#startButton:hover, #restartButton:hover {
+  background: linear-gradient(to bottom, #104f8c, #2594b9);
+}
+
+* {
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* From Uiverse.io by qhns3 */
+html {
+  background: linear-gradient(315deg, transparent 75%, #0a0a0a 0)-24px 0,
+  linear-gradient(45deg, transparent 75%, #0a0a0a 0) 24px 0,
+  linear-gradient(135deg, #3d3d3d 50%, transparent 0) 0 0,
+  linear-gradient(45deg, #575757 50%, #707070 0) 0 0 #707070;
+  background-size: 48px 48px;
+}
+
+
 
