@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+img {
+    display: none;
+}
+
+.canvas-container {
+    width: 816px;
+    margin: 100px auto;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+button {
+    font-family: 'Luminari', fantasy;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: rgb(242, 131, 28);
+    color: rgb(255, 247, 227);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(200, 100, 20);
+}
